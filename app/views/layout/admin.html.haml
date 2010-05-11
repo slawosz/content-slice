@@ -1,0 +1,41 @@
+!!! Strict
+%html
+  %head
+    %title Admin
+    %meta{ :content => 'text/html; charset=utf-8', 'http-equiv' => "content-type" }
+    
+    = css_include_tag "#{public_path_for "/stylesheets/base.css"}"
+    = css_include_tag "#{public_path_for "/stylesheets/theme.css"}"
+    = css_include_tag "#{public_path_for "/stylesheets/jquery.lightbox.css"}"
+    = js_include_tag "#{public_path_for "/javascripts/jquery.js"}"
+    = js_include_tag "#{public_path_for "/javascripts/jquery.ui/jquery-ui-personalized-1.5.3.js"}"
+    = js_include_tag "#{public_path_for "/javascripts/jquery.MultiFile.js"}"
+    = js_include_tag "#{public_path_for "/javascripts/jquery.lightbox.js"}"
+    = js_include_tag "#{public_path_for "/javascripts/jquery.tablednd.js"}"
+    = js_include_tag "#{public_path_for "/javascripts/jquery.ui/i18n/ui.datepicker-pl.js"}"
+    = css_include_tag "#{ "/stylesheets/sexy_forms.css"}"
+    = css_include_tag "#{ "/stylesheets/ui.datepicker.css"}"
+    = js_include_tag "#{public_path_for "/javascripts/tiny_mce/tiny_mce.js" }"
+    = js_include_tag "#{public_path_for "/javascripts/jquery.metadata.min.js" }"
+    = js_include_tag "#{public_path_for "/javascripts/master" }"
+
+    - if @editor
+      = partial "layout/tiny_include" 
+
+  %body{ :class => "yui-skin-sam" }
+    #container
+      #header      
+        %br
+        %br
+        %br
+        #main-navigation
+          = partial "layout/menu"
+        .clear
+      #wrapper
+        #content	
+          - message.each_pair do |type, msg|
+            = tag :div, msg, :class => type.to_s, :id => "flash"
+          #main
+            = catch_content :for_layout
+
+

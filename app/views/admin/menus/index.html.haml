@@ -1,0 +1,15 @@
+%h1
+  Lista Menu
+
+%table
+  %tr
+  - for menu in @menus
+    %tr
+      %td
+        = menu.name
+      %td
+        = link_to 'Edytuj', slice_url(:edit_admin_menu, params[:language],  menu)
+      %td
+        = link_to 'Usuń', slice_url(:destroy_admin_menu, params[:language], menu), :class => "delete-admin-resource"
+
+= link_to 'Nowe menu', slice_url(:new_admin_menu)

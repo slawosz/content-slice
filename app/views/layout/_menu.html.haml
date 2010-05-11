@@ -1,0 +1,8 @@
+%ul{ :id => "menu" }
+  = avaible_menus(@_menus,params[:language])
+  %li
+    = link_to "Artykuły", "/#{params[:language]}/admin/articles"
+  %li
+    = link_to "Aktualności", "/#{params[:language]}/admin/news_pages"
+  %li
+    = link_to "Galerie", "/#{params[:language]}/admin/galleries"

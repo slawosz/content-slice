@@ -1,0 +1,22 @@
+body.yui-skin-sam .yui-editor-panel .yui-toolbar-group-border {
+  width: 250px;
+}
+
+body.yui-skin-sam .yui-editor-panel .height-width {
+  margin-left: 15px;
+}
+
+body.yui-skin-sam .yui-editor-panel .yui-toolbar-group-textflow {
+  width: 210px;
+}
+
+body.yui-skin-sam .yui-editor-panel label input {
+  width: 60%;
+  margin: 4px;
+}
+
+body.yui-skin-sam #insertImageLinkBrowse, 
+body.yui-skin-sam #insertImageBrowse,
+body.yui-skin-sam #createLinkBrowse {
+  margin-top: 2px;
+}

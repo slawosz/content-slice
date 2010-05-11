@@ -1,0 +1,12 @@
+- if @article.blank? && @gallery.blank?
+  Przepraszamy, w tym dziale nie ma jeszcze treści. Zapraszamy wkrótce
+  - else
+    - if !@article.blank?
+      #article
+        .title
+          = @article.title
+      .content
+        = @article.content
+    - if !@gallery.blank?
+      .photos
+        = display_gallery(@photos)

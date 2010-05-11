@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+  <head>
+    <title>Fresh Merb App</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <%= css_include_tag "#{public_path_for "/stylesheets/base.css"}" %>
+    <%= css_include_tag "#{public_path_for "/stylesheets/theme.css"}" %>
+    <%= css_include_tag "#{public_path_for "/stylesheets/jquery.lightbox.css"}" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/jquery.js"}" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/jquery.ui/jquery-ui-personalized-1.5.3.js"}" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/jquery.MultiFile.js"}" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/jquery.lightbox.js"}" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/jquery.tablednd.js"}" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/jquery.ui/i18n/ui.datepicker-pl.js"}" %>
+    <%= css_include_tag "#{public_path_for  "/stylesheets/sexy_forms.css"}" %>
+    <%= css_include_tag "#{public_path_for  "/stylesheets/ui.datepicker.css"}" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/tiny_mce/tiny_mce.js" }" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/jquery.metadata.min.js" }" %>
+    <%= js_include_tag "#{public_path_for "/javascripts/master" }" %>
+
+    <%= js_include_tag "#{public_path_for "/javascripts/tiny_mce/tiny_mce_popup.js" }" %>
+    <%= css_include_tag "#{ public_path_for "/stylesheets/file_manager.css"}" %>
+    <%= partial "layout/tiny_include" %>
+    <% if false %>
+    <%= ["jquery.lightbox.css", "file_manager.css", "jquery.ui/flora/flora.css",
+          "jquery.ui/flora/flora.resizable.css", "jquery.ui/flora/flora.slider.css",
+          "jquery.ui/flora/flora.accordion.css", "jquery.ui/flora/flora.tabs.css",
+          "jquery.ui/flora/flora.dialog.css"].map do |file|
+            "<link href=\"/slices/file_manager_slice/stylesheets/#{file}\" type=\"text/css\" charset=\"utf-8\" rel=\"stylesheet\" media=\"all\" />"
+          end.join("\n");
+    %>
+    <%= ["console.js", "template.js", "jquery.js", "jquery.dimensions.js", "jquery.livequery.js", "jquery.ui/ui.core.js",
+        "jquery.ui/ui.dialog.js", "jquery.ui/ui.tabs.js", "jquery.ui/ui.draggable.js", "jquery.ui/ui.droppable.js",
+        "jquery.ajaxfileupload.js", "master.js", "jquery.tooltip.js",
+        "jquery.lightbox.js", "jquery.MultiFile.js",
+        "jquery.uploadProgress.js", "jquery.lightBoxFu.js", "jquery.hotkeys.js",
+        "jquery.selectableFu.js", "jquery.file_manager.js"].map do |file|
+          "<script src=\"/slices/file_manager_slice/javascripts/#{file}\" type=\"text/javascript\" charset=\"utf-8\"></script>"
+        end.join("\n")
+      %>
+      <%= ["tiny_mce/tiny_mce_popup.js", "filebrowser.js"].map do |file|
+          "<script src=\"/slices/content-slice/javascripts/#{file}\" type=\"text/javascript\" charset=\"utf-8\"></script>"
+        end.join("\n")
+      %>
+    <% end %>
+
+<body  class="flora filebrowser-body">
+    <div id="file-manager">
+    </div>
+</body>
+</html>

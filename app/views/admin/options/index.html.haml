@@ -1,0 +1,25 @@
+%h1
+  Options controller, index action
+
+%table
+  %tr
+    %th
+    %th
+      Nazwa
+    %th
+      Wartość
+    %th
+    %th
+
+  - for option in @options
+    %tr
+      %td
+      %td
+        = option.name
+      %td
+        = option.value
+      %td
+        = link_to 'Edit', slice_url(:edit_admin_option, params[:language],  option)
+      %td
+
+= link_to 'New', slice_url(:new_admin_option)

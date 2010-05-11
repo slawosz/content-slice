@@ -1,0 +1,10 @@
+# This is a sample database file for the DataMapper ORM
+development: &defaults
+# These are the settings for repository :default
+  adapter:  sqlite3
+  database: sample_development.db
+
+test: &defaults
+# These are the settings for repository :default
+  adapter:  sqlite3
+  database: gallery_slice_test.db

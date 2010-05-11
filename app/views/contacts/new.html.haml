@@ -1,0 +1,15 @@
+%h2 Skontaktuj się z nami
+
+
+= error_messages_for @contact
+
+= sexy_form_for(@contact, :action => url(:contacts) ) do
+  
+  = text_field :name, :label => "Imię"
+  = text_field :surname, :label => "Nazwisko"
+  = text_field :email, :label => "Email"
+  = text_field :phone, :label => "Telefon"
+  = text_field :topic, :label => "Temat"
+  = text_area :text, :label => "Wiadomość"
+  = submit "Wyślij"
+

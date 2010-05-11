@@ -1,0 +1,5 @@
+/log
+/pkg
+*.db
+/public/uploads
+/public/files

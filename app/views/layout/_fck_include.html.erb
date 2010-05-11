@@ -1,0 +1,23 @@
+
+
+    <% ["jquery.lightbox.css", "file_manager.css", "jquery.ui/flora/flora.css",
+          "jquery.ui/flora/flora.resizable.css", "jquery.ui/flora/flora.slider.css",
+          "jquery.ui/flora/flora.accordion.css", "jquery.ui/flora/flora.tabs.css",
+          "jquery.ui/flora/flora.dialog.css"].each do |file| %>
+            <link href="<%= public_path_for "stylesheets" / file %>" type="text/css" charset="utf-8" rel="stylesheet" media="all" /> 
+            
+    <% end %>
+
+
+    <% other_javascripts =  ["console.js", "template.js", "jquery.js", "jquery.dimensions.js", "jquery.livequery.js", "jquery.ui/ui.core.js",
+        "jquery.ui/ui.dialog.js", "jquery.ui/ui.tabs.js", "jquery.ui/ui.draggable.js", "jquery.ui/ui.droppable.js",
+        "jquery.ajaxfileupload.js", "master.js", "jquery.tooltip.js",
+        "jquery.lightbox.js", "jquery.MultiFile.js",
+        "jquery.uploadProgress.js", "jquery.lightBoxFu.js", "jquery.hotkeys.js",
+        "jquery.selectableFu.js", "jquery.file_manager.js","fckeditor/fckeditor.js","fckload.js"] 
+%>
+
+
+    <% other_javascripts.each do |file|  %>
+          <script src="<%= public_path_for "javascripts" / file %>" type="text/javascript" charset="utf-8"></script>
+    <%  end %>

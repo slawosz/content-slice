@@ -1,0 +1,27 @@
+%h1
+  Lista galerii
+
+=# link_to 'Dodaj nową galerię', slice_url(:new_admin_gallery)
+%br
+
+%table{ :class => "table" }
+  %tr
+    %th{ :class => "first" }
+    %th 
+      Nazwa galerii
+    %th
+    %th
+    %th{ :class => "last" }
+       
+  - for gallery in @galleries
+    %tr
+      %td
+      %td
+        %b= gallery.name
+      %td
+        = link_to 'Edycja i zarządzanie galerią', slice_url(:edit_admin_gallery, params[:language],  gallery)
+      %td
+        = link_to 'Usuń', slice_url(:destroy_admin_gallery, params[:language], gallery), :class => "delete-admin-resource"
+      %td
+
+= link_to 'Dodaj nową galerię', slice_url(:new_admin_gallery)

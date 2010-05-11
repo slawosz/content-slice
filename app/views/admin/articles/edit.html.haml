@@ -1,0 +1,12 @@
+%h1== Edycja artykułu #{@article.title}
+
+= error_messages_for @article
+
+= sexy_form_for(@article, :action => slice_url(:admin_article, params[:language], @article)) do
+  
+  = partial :form
+
+  %p
+    = submit "Zapisz"
+
+= link_to 'Anuluj', slice_url(:admin_articles)

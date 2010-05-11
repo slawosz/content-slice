@@ -1,0 +1,30 @@
+%h1
+  Aktualności
+
+= link_to 'Dodaj nową aktualność', slice_url(:new_admin_news_page)
+
+%table{ :class => "table" }
+  %th{ :class => "first" }
+  %th
+    Tytuł
+  %th
+    Data
+  %th
+  %th
+  %th{ :class => "last" }
+    
+  %tr
+  - for news_page in @news_pages
+    %tr
+      %td
+      %td
+        = news_page.title
+      %td
+        = news_page.created_on
+      %td
+        = link_to 'Edytuj', slice_url(:edit_admin_news_page, params[:language], news_page)
+      %td
+        = link_to 'Usuń', slice_url(:destroy_admin_news_page, params[:language],  news_page), :class => "delete-admin-resource"
+      %td
+
+= link_to 'Dodaj nową aktualność', slice_url(:new_admin_news_page)

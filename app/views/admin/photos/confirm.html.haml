@@ -1,0 +1,11 @@
+%h2 Potwierdzenie usunięcia zdjęcia
+
+%p
+  == Czy na pewno chcesz usunąć zdjęcie #{@photo.title}?  
+  = link_to "Tak", slice_url(:delete_gallery_photo, params[:language], params[:gallery_id], @photo)
+  |
+  = link_to "Nie", slice_url(:gallery_photo, params[:language], params[:gallery_id], @photo)
+
+Zdjęcie:
+%br
+= image_tag @photo.file.url(:thumb)

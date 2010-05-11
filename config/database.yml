@@ -1,0 +1,13 @@
+# This is a sample database file for the DataMapper ORM
+development:
+  database: content_slice_development
+  adapter: postgresql
+  username: slawosz
+  password: slawosz
+  host: localhost
+  encoding: utf8
+
+test: &defaults
+# These are the settings for repository :default
+  adapter:  sqlite3
+  database: gallery_slice_test.db

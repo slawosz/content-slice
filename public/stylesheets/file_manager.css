@@ -1,0 +1,268 @@
+
+a img {
+    border: none;
+}
+
+body.yui-skin-sam .yui-navset .yui-content {
+  background: #FFF url('/images/admin/content-middle.jpg') repeat-x;
+  padding: 0;
+}
+
+.fileManager .files ul li.even {
+  background: #dfdfdf;
+}
+
+.directory-active {
+  /*background-color: ;*/
+  border: 1px solid red;
+}
+
+.files {
+  float: left;
+}
+
+.files ul {
+  margin: 0 0 0 15px;
+  padding: 0;
+  width: 510px;
+}
+
+.files ul a {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #345282;
+}
+
+.file_properties {
+  width: 25%;
+  float: right;
+  height: 300px;
+  border: 1px solid black;
+  display:none;
+}
+
+.files ul li a, span.image{
+  float: left;
+}
+.files ul li span.name {
+    text-align: left;
+}
+.files ul li {
+  list-style-type: none;
+  display: block;
+  width: 700px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.rte-file-manager .files ul li {
+  width: 638px;
+}
+
+.rte-file-manager .files #files_header{
+    width: 638px;
+}
+.files #files_header{
+  width: 705px;
+  height: 40px;
+  text-align: center;
+  margin-left: 15px; 
+}
+
+.files #files_header span {
+  display: block;
+  float: left;
+  line-height: 55px;
+  height: 39px;
+  border-bottom: 1px solid #000;
+}
+
+.fileManager .form {
+  margin-top: 15px;
+}
+
+.files ul li.directory span {
+}
+  
+.files ul li span {
+  float: left;
+  display: block;
+  height: 30px;
+}
+
+#header_move, .move {
+  width: 36px;
+  margin-right: 3px;
+}
+
+.move img {
+  margin: 5px auto;
+}
+
+.icon {
+  width: 38px;
+}
+
+.icon img{
+  margin: 5px auto;
+}
+
+.name{
+  width: 390px;
+  margin-right: 3px;
+}
+
+.file .name a{
+  color: #666;
+}
+
+#header_name {
+  width: 428px;
+  margin-right: 3px;
+}
+
+.rte-file-manager .name{
+  width: 327px;
+  margin-right: 3px;
+}
+
+.rte-file-manager #header_name {
+  width: 365px;
+  margin-right: 3px;
+}
+
+.files #files_header span#header_change_name, .change_name {
+  width: 105px;
+  margin-right: 3px;
+  text-align: center;
+}
+
+a.rename {
+  padding: 0 40px; 
+  width: 24px;
+  height: 28px;
+  background: url('/images/admin/rename.png') no-repeat center;
+}
+
+#header_size, .size {
+  width: 79px;
+  margin-right: 3px;
+}
+
+#header_delete, .delete {
+  width: 40px;
+}
+
+.delete a {
+  width: 100%;
+}
+
+.delete img {
+  margin: 3px auto;
+}
+
+
+
+.files ul li.directory {
+/*  background: url('/images/file_manager/dir.jpg') no-repeat;*/
+}
+
+.files ul li.file {
+/*  background: url('/images/file_manager/file.jpg') no-repeat;*/
+}
+
+.files ul li.up {
+/*  background: url('/images/file_manager/up.jpg') no-repeat;*/
+}
+
+.files ul li.up span.move img {
+    display: none;
+}
+
+.directory_active {
+  border: 2px solid green;
+}
+
+.fileManager .files ul li.directory_hover {
+  background-color: #cd0000;
+}
+
+body .files ul li.dragging {
+  background: none;
+}
+
+.files ul li.selected, .files ul li.selected span  {
+  background-color: #a7c5de;
+}
+
+/* ------- Layout --------- */
+
+#manager_title{
+  background: url('/images/admin/content_bottom_with_buttons.jpg') no-repeat bottom;
+}
+
+#manager_title div{
+  color: #345282;
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 75px;
+  padding: 0 10px;
+  background: url('/images/admin/content_top.jpg') no-repeat bottom;
+}
+
+#file_upload_box{
+  background: url('/images/admin/content_bottom.jpg') no-repeat bottom;
+  padding: 10px 10px 15px 10px;
+  position: relative;
+}
+
+.rte-file-manager #file_upload_box {
+    border-bottom: 1px solid #9d9f9e;
+    background: #fff;
+}
+.rte-file-manager #under_file_upload_box {
+  background: #dfdfdf;
+  border-bottom: 1px solid #9d9f9e;
+}
+#under_file_upload_box {
+  position: relative;
+  height: 60px;
+  background: #dfdfdf url('/images/admin/content_top.jpg') no-repeat bottom;
+}
+
+#file_upload_button {
+
+}
+.rte-file-manager #new_folder_button {
+  left: 10px;
+  bottom: -1px;
+  height: 30px;
+  background: url('/images/admin/add_new_file.jpg') no-repeat;
+}
+#new_folder_button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 188px;
+  text-align: center;
+  background: url('/images/admin/content_button_top_left.jpg') no-repeat;
+}
+
+#new_folder_button a {
+  color: #315382;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+#file-manager-tab {
+  overflow: auto; 
+  height: 400px;
+}
+

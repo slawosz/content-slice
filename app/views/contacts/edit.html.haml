@@ -1,0 +1,15 @@
+%h1
+  Contacts controller, edit action
+%p
+  Edit this file in
+  %tt
+    app/views/contacts/edit.html.erb
+= error_messages_for @contact
+
+= form_for(@contact, :action => url(:contact, @contact)) do
+  %p
+    = submit "Update"
+
+= link_to 'Show', url(:contact, @contact)
+|
+= link_to 'Back', url(:contacts)

@@ -1,0 +1,31 @@
+%h1
+  Lista artykułów
+
+=# link_to 'Dodaj nowy artykuł', slice_url(:new_admin_article)
+%br
+
+%table{ :class => "articles-table" }
+  %thead
+    %tr
+      %th{ :class => "first" }
+      %th
+      %th 
+        Tytuł artykułu
+      %th
+      %th
+      %th{ :class => "last" }
+  
+  %tbody
+    - for article in @articles
+      %tr{ :id => "article" }
+        %td
+        %td{ :class => "handle" }
+        %td
+          %b= article.title
+        %td
+          = link_to 'Edycja artykułu', slice_url(:edit_admin_article, params[:language],  article)
+        %td
+          = link_to 'Usuń', slice_url(:destroy_admin_article, params[:language],  article), :class => "delete-admin-resource"
+        %td
+
+= link_to 'Dodaj nowy artykuł', slice_url(:new_admin_article)

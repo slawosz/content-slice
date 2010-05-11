@@ -1,0 +1,14 @@
+%h1== Element menu #{@menu_element.name}
+
+= error_messages_for @menu_element
+
+= sexy_form_for(@menu_element, :action => slice_url(:admin_menu_menu_element, params[:language], @menu, @menu_element)) do
+
+  = partial :form
+
+  = partial :attach_menu_articles
+  = partial :attach_menu_galleries
+
+  = submit "Zapisz"
+
+= link_to 'Anuluj', slice_url(:admin_menu_menu_elements, params[:language], @menu)

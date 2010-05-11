@@ -1,0 +1,25 @@
+<%= javascript_tag "AUTHENTICITY_TOKEN = '#{form_authenticity_token}';" %>
+
+<%  yui_suffix = '/yui/2.6.0/build/'
+    yui_files = [ "#{yui_suffix}yahoo-dom-event/yahoo-dom-event.js",
+                  "#{yui_suffix}element/element-beta-min.js",
+                  "#{yui_suffix}container/container_core-min.js",
+                  "#{yui_suffix}menu/menu-min.js",
+                  "#{yui_suffix}button/button-min.js",
+                  "#{yui_suffix}editor/editor-min.js",
+                  "#{yui_suffix}animation/animation-min.js",
+                  "#{yui_suffix}container/container-min.js"
+                ]
+
+    other_javascripts = [ "jquery.extensions.js", "jquery.MultiFile.js", "jquery.ajaxfileupload.js", 
+                          "jquery.uploadProgress.js", "template.js", 
+                          "jquery.lightBoxFu.js", "jquery.selectableFu.js", "jquery.file_manager.js",
+                          "jquery.ui/ui.core", "jquery.ui/ui.draggable", "jquery.ui/ui.droppable",
+                          "jquery.tooltip.js", "jquery.form",
+                          "rte.js", {:cache => "cache/admin_articles"}
+    ]
+%>
+
+
+<%= javascript_include_tag *(yui_files + other_javascripts) %>
+

@@ -1,0 +1,12 @@
+%h1
+  Options controller, edit action
+= error_messages_for @option
+
+= sexy_form_for(@option, :action => slice_url(:admin_option, params[:language], @option)) do
+  
+  = text_field :name, :label => "Nazwa"
+  = text_field :description, :label => "Opis"
+  = check_box :value, :label => "Aktywne?" 
+  = submit "Update"
+
+= link_to 'Back', slice_url(:admin_options)

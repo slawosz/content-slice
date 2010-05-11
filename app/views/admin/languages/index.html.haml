@@ -1,0 +1,17 @@
+%h1
+  Languages controller, index action
+
+%table
+  %tr
+  - for language in @languages
+    %tr
+      %td
+        = language.name
+      %td
+        = language.code
+      %td
+        = link_to 'Edit', slice_url(:edit_admin_language, params[:language],  language)
+      %td
+        = link_to 'Usuń', slice_url(:destroy_admin_language, params[:language],  language), :class => "delete-admin-resource"
+
+= link_to 'New', slice_url(:new_admin_language)

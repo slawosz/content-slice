@@ -1,0 +1,11 @@
+%h1 Dodaj nową aktualność
+
+
+= error_messages_for @news_page
+
+= sexy_form_for(@news_page, :action => slice_url(:admin_news_pages) ) do
+  = partial :form
+  %p
+    = submit "Dodaj"
+
+= link_to 'Anuluj', slice_url(:admin_news_pages)

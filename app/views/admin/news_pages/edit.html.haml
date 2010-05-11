@@ -1,0 +1,12 @@
+%h1
+  Edycja aktualności
+
+= error_messages_for @news_page
+
+= sexy_form_for(@news_page, :action => slice_url(:admin_news_page, params[:language], @news_page)) do
+  = partial :form
+  %p
+    = submit "Zapisz"
+
+
+= link_to 'Back', slice_url(:admin_news_pages)

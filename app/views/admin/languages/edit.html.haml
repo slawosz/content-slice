@@ -1,0 +1,12 @@
+%h1
+  Languages controller, edit action
+
+= error_messages_for @language
+
+= sexy_form_for(@language, :action => slice_url(:admin_language, params[:language], @language)) do
+  
+  = partial :form
+
+  = submit "Update"
+
+= link_to 'Back', slice_url(:admin_languages)

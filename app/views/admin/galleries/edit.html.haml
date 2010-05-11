@@ -1,0 +1,23 @@
+%h1
+  Edytuj galerie
+
+= error_messages_for @gallery
+
+= sexy_form_for(@gallery, :action => slice_url(:admin_gallery, params[:language], @gallery)) do
+  
+  = text_field :name, :label => "Nazwa"
+
+  =# file_field :name => "photos[]", :label => "Wybierz zdjęcie", :class => "multifile"
+  %li{ :class => "photos" }
+    = link_to "Dodaj zdjęcia do galerii", "#", :id => "show-photos-form"
+    #photos-form
+      %label{ :class => "main" }
+        Wybierz zdjęcia
+      - (1..6).each do
+        = file_field :name => "photos[]", :class => "photos"
+
+  #photos{ :class => "{ gallery_id: #{params[:id]} }" }
+    = partial :photo, :with => @photos
+  = submit "Zapisz"
+
+= link_to 'Anuluj', slice_url(:admin_galleries)

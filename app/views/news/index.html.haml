@@ -1,0 +1,12 @@
+%h2{ :class => "news" }
+  Aktualności
+
+- for news in @news do
+  .news
+    .title
+      = news.title
+    .preface
+      = news.preface
+    .more
+      = link_to "Więcej", slice_url(:news, news)
+    .clear

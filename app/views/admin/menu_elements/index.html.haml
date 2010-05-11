@@ -1,0 +1,33 @@
+%h1
+  Elementy menu
+
+%table{ :class => "table { menu_id: #{params[:menu_id]}  }", :id => "menu_elements" }
+  %thead
+    %tr
+      %th{ :class => "first" }
+      %th
+      %th
+        Nazwa
+      %th
+        Aktywność?
+      %th
+      %th
+      %th{ :class => "last" }
+
+  %tbody
+    - for menu_element in @menu_elements
+      %tr{ :class => "sortable", :id => "#{menu_element.id}element" }
+        %td
+        %td{ :class => "handle" }
+          = image_tag("admin/move.png")
+        %td
+          %b= menu_element.name
+        %td
+          = menu_element.active == true ? "Aktywny" : "Nieaktywny"
+        %td
+          = link_to 'Edytuj', slice_url(:edit_admin_menu_menu_element, params[:language], @menu,  menu_element)
+        %td
+          = link_to 'Usuń', slice_url(:destroy_admin_menu_menu_element, params[:language], @menu, menu_element), :class => "delete-admin-resource"
+        %td
+
+= link_to 'Dodaj nowy element menu', slice_url(:new_admin_menu_menu_element, params[:language], @menu)

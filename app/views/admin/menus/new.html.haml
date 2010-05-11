@@ -1,0 +1,12 @@
+%h1 Dodaj nowe menu
+
+
+= error_messages_for @menu
+
+= sexy_form_for(@menu, :action => slice_url(:admin_menus) ) do
+  
+  = partial :form
+
+  = submit "Dodaj"
+
+= link_to 'Anuluj', slice_url(:admin_menus)

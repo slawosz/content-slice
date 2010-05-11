@@ -1,0 +1,9 @@
+
+<%  javascripts =  ["template.js","jquery.livequery.js","jquery.dimensions.js","jquery.ajaxfileupload.js", "jquery.tooltip.js", "jquery.MultiFile.js",
+        "jquery.uploadProgress.js", "jquery.lightBoxFu.js", "jquery.hotkeys.js","jquery.selectableFu.js", "jquery.file_manager.js","filebrowser.js"] 
+%>
+
+
+<% javascripts.each do |file|  %>
+  <script src="<%= public_path_for "javascripts" / file %>" type="text/javascript" charset="utf-8"></script>
+<%  end %>

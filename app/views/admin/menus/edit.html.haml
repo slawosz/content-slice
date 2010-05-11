@@ -1,0 +1,11 @@
+%h1== Edytuj menu #{@menu.name}
+
+= error_messages_for @menu
+
+= sexy_form_for(@menu, :action => slice_url(:admin_menu, params[:language], @menu)) do
+    
+  = partial :form
+
+  = submit "Zapisz"
+
+= link_to 'Anuluj', slice_url(:admin_menus)

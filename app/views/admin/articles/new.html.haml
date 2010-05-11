@@ -1,0 +1,12 @@
+%h1 Nowy artykuł
+
+
+= error_messages_for @article
+
+= sexy_form_for(@article, :action => slice_url(:admin_articles) ) do
+  
+  = partial :form  
+
+  %p
+    = submit "Dodaj"
+    = link_to 'Anuluj', slice_url(:admin_articles)

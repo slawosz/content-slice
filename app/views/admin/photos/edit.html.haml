@@ -1,0 +1,14 @@
+%h1
+  Edycja zdjęcia
+
+= error_messages_for @photo
+= image_tag(@photo.file.url(:thumb))
+
+= sexy_form_for(@photo, :action => slice_url(:admin_gallery_photo, params[:language], @gallery, @photo)) do
+
+  = text_field :title, :label => "Nazwa"
+  =# text_field :description, :label => "Opis"
+  
+  = submit "Zapisz"
+
+= link_to 'Anuluj', slice_url(:edit_admin_gallery, params[:language], @gallery)

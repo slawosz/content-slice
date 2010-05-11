@@ -1,0 +1,13 @@
+.photo{ :id => "photo_#{photo.id}" }
+  .handle
+    = image_tag "admin/move.png"
+  .admin-links
+    = link_to "Edytuj", slice_url(:edit_admin_gallery_photo, params[:language], @gallery, photo)
+    = link_to 'Usuń', slice_url(:destroy_admin_gallery_photo, params[:language], @gallery, photo), :class => "delete-admin-resource"
+  
+  = link_to( image_tag( photo.file.url(:thumb) ), photo.file.url(:big), :rel => "lightbox")
+  
+  .title
+    = photo.get_description("pl")
+    = photo.has_description?(params[:language]) ?  photo.get_description(params[:language] ) : "<i>(edytuj zdjęcie)</i>"
+

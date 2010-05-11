@@ -1,0 +1,5 @@
+= text_field :title, :label => "Tytuł:"
+- if @options[:preface_in_article]
+  = text_area :content, :label => "Wstęp:", :class => "editor_area", :id => "preface-text" 
+= text_area :content, :label => "Treść:", :class => "editor_area", :id => "content-text"
+
